@@ -12,36 +12,55 @@
   </head>
 
   <body>
-    <div class='flex-column justify-space-around'>
-      <header class='display-flex justify-space-between align-center p-2'>
-        <h1>
-          <span role='img' aria-label='money'></span>
-          <a href='/'>Tech Blog!</a>
-        </h1>
-        <nav>
-          <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
-            <a href='/profile'>profile</a>
-            |
-            <button class='no-button' id='logout'>logout</button>
+    <h1> <a href="/">Tech Blog </a> </h1>
+    
+    <div class='nav  justify-content-center' >
+      {{#if logged_in}}
+        <ul class='nav justify-content-center'>
+           <li class='nav-item'>
+            <a
+              class='nav-link active'
+              aria-current='page'
+              href='/'
+            >Home</a>
+          </li>
+          <li class='nav-item'>
+            <a
+              class='nav-link active'
+              aria-current='page'
+              href='/profile'
+            >Dashboard</a>
+          </li>
+          <li class='nav-item'>
+            <a
+              class='nav-link active'
+              aria-current='page'
+              id='logout'
+              href="/login"
+            >Logout</a>
+          </li>
           {{else}}
-            <a href='/login'>login</a>
-          {{/if}}
-        </nav>
-      </header>
+          <li class='nav-item'>
+           <a
+              class='nav-link active'
+              aria-current='page'
+              href='/login'
+            >Login</a>
+          </li>
+        </ul>
+      {{/if}}
+    </div>
+      
       <main class='container container-fluid mt-5'>
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
-      <footer>
-
-      </footer>
-    </div>
-
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
       <script src='/js/logout.js'></script>
     {{/if}}
+
   </body>
+ 
 
 </html>

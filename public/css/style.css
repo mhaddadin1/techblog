@@ -1,5 +1,35 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+}
+
+body {
+  background-color: steelblue;
+}
+
+a {
+  color: rgb(42, 40, 40);
+  font-size: larger;
+  text-decoration: none;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: rgb(42, 40, 40);
+  border-color: rgb(42, 40, 40);
+}
+
+.btn-primary {
+  background-color: rgb(42, 40, 40);
+  border-color: rgb(42, 40, 40);
+}
+
+.c-b {
+  color: rgb(42, 40, 40);
+}
+
+.nav-link {
+  color: rgb(42, 40, 40);
 }
 
 .no-button {
@@ -15,10 +45,4 @@ header, .project:not(:last-child) {
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
 }
